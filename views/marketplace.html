@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MengYou Marketplace</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>梦友 - Marketplace</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="post.html">Create Post</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Marketplace Items</h2>
+    <div id="marketplace-list"></div>
+
+    <section class="form-container">
+      <h3>List New Item (for registered users)</h3>
+      <form action="php/add-item.php" method="POST">
+        <input type="text" name="item_name" placeholder="Item Name" required />
+        <textarea name="description" placeholder="Description" required></textarea>
+        <input type="number" name="price" placeholder="Price" required />
+        <button type="submit">List Item</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 梦友 MengYou - Marketplace</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    fetch("php/fetch-items.php")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("marketplace-list");
+        data.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "post";
+          card.innerHTML = `
+            <h3>${item.item_name}</h3>
+            <p>${item.description}</p>
+            <strong>Price: $${item.price}</strong>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
