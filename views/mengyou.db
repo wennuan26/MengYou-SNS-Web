@@ -28,3 +28,6 @@ CREATE TABLE marketplace (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
+UPDATE users SET role='admin' WHERE username='admin';
