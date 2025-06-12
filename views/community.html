@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communities - MengYou</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>梦友 - Communities</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Browse Communities</h2>
+    <div id="community-list"></div>
+
+    <section class="form-container">
+      <h3>Create New Community (registered users)</h3>
+      <form action="php/create-community.php" method="POST">
+        <input type="text" name="community_name" placeholder="Community Name" required />
+        <textarea name="description" placeholder="Description" required></textarea>
+        <button type="submit">Create Community</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 梦友 MengYou - Communities</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    fetch("php/fetch-communities.php")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("community-list");
+        data.forEach(community => {
+          const card = document.createElement("div");
+          card.className = "post";
+          card.innerHTML = `
+            <h3>${community.name}</h3>
+            <p>${community.description}</p>
+            <form method="POST" action="php/join-community.php">
+              <input type="hidden" name="community_id" value="${community.id}" />
+              <button type="submit">Join</button>
+            </form>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
