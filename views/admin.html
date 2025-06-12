@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - MengYou</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>梦友 - Admin Panel</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>All Users</h2>
+    <div id="admin-users"></div>
+
+    <h2>All Posts</h2>
+    <div id="admin-posts"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 MengYou Admin</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    fetch("php/admin-fetch-users.php")
+      .then(res => res.json())
+      .then(users => {
+        const container = document.getElementById("admin-users");
+        users.forEach(user => {
+          const card = document.createElement("div");
+          card.className = "post";
+          card.innerHTML = `
+            <h3>${user.username}</h3>
+            <p>Email: ${user.email}</p>
+            <p>Role: ${user.role}</p>
+            <form action="php/delete-user.php" method="POST">
+              <input type="hidden" name="user_id" value="${user.id}" />
+              <button type="submit">Delete User</button>
+            </form>
+          `;
+          container.appendChild(card);
+        });
+      });
+
+    fetch("php/admin-fetch-posts.php")
+      .then(res => res.json())
+      .then(posts => {
+        const container = document.getElementById("admin-posts");
+        posts.forEach(post => {
+          const card = document.createElement("div");
+          card.className = "post";
+          card.innerHTML = `
+            <h3>${post.title}</h3>
+            <p>${post.content}</p>
+            <form action="php/delete-post.php" method="POST">
+              <input type="hidden" name="post_id" value="${post.id}" />
+              <button type="submit">Delete Post</button>
+            </form>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
