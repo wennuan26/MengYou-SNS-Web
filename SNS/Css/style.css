@@ -1,9 +1,8 @@
-/* Base */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -13,95 +12,153 @@ body {
 }
 
 header {
-  background: #1e1e1e;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #1f1f1f;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #333;
 }
 
-header h1 {
-  color: #00bcd4;
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00aaff;
+}
+
+header .logo span {
+  color: #f72585;
 }
 
 nav a {
-  color: #ccc;
-  margin-left: 1.5rem;
+  color: #f1f1f1;
   text-decoration: none;
+  margin-left: 1.5rem;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #00bcd4;
+  color: #00aaff;
 }
 
 main {
-  padding: 2rem;
   max-width: 800px;
-  margin: auto;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .post-creator {
   background: #1e1e1e;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-creator textarea {
-  width: 100%;
-  height: 80px;
-  background: #2c2c2c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem;
+  background: #121212;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 0.8rem;
+  border-radius: 6px;
   resize: none;
+  min-height: 80px;
+  margin-bottom: 0.8rem;
 }
 
 .post-creator button {
-  margin-top: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #d4009f;
-  color: #fff;
+  align-self: flex-end;
+  background: #00aaff;
+  color: white;
   border: none;
-  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .post-creator button:hover {
-  background-color: #a70075;
+  background: #0077cc;
 }
 
-.feed {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.post {
+.feed .post {
   background: #1e1e1e;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 10px;
-  border-left: 5px solid #00bcd4;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-.post h3 {
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 0.5rem;
-  color: #00bcd4;
 }
 
-.post span {
-  display: block;
-  margin-top: 0.5rem;
-  color: #aaa;
-  font-size: 0.9rem;
+.post img {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #1e1e1e;
-  color: #777;
-  margin-top: 2rem;
+  padding: 2rem 1rem;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  margin-top: 3rem;
+}
+
+.post .actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  align-items: center;
+}
+
+.actions button {
+  background: none;
+  color: #00aaff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  color: #f72585;
+}
+
+.comment-box {
+  margin-top: 1rem;
+}
+
+.comment-box input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #121212;
+  color: #fff;
+}
+
+.comment-list {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+input[type="file"] {
+  background-color: #121212;
+  color: #ccc;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
 }
