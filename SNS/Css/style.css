@@ -1,0 +1,107 @@
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+header {
+  background: #1e1e1e;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #00bcd4;
+}
+
+nav a {
+  color: #ccc;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.post-creator {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.post-creator textarea {
+  width: 100%;
+  height: 80px;
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  resize: none;
+}
+
+.post-creator button {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #d4009f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-creator button:hover {
+  background-color: #a70075;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 5px solid #00bcd4;
+}
+
+.post h3 {
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+}
+
+.post span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e1e1e;
+  color: #777;
+  margin-top: 2rem;
+}
