@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DarkSNS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DarkSNS</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Messages</a>
+      <a href="#">Profile</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="post-creator">
+      <textarea placeholder="What's on your mind?"></textarea>
+      <button onclick="createPost()">Post</button>
+    </section>
+
+    <section class="feed" id="feed">
+      <!-- Hardcoded posts -->
+      <article class="post">
+        <h3>@chei</h3>
+        <p>Finally finished my Java SNS project! 😎</p>
+        <span>2025-06-16</span>
+      </article>
+
+      <article class="post">
+        <h3>@wen</h3>
+        <p>Working on dark theme UI, hope you all love it 💜</p>
+        <span>2025-06-15</span>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DarkSNS. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
