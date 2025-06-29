@@ -10,13 +10,20 @@
 <body>
   <header>
     <div class="logo">MengYou<span>梦友</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="messages.html">Messages</a>
-      <a href="profile.html">Profile</a>
-      <a href="friends.html">Friends</a>
-    </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="messages.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="friends.html">Friends</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </nav>
+    <div class="welcome-message">Welcome, <span id="usernameDisplay"></span></div>
   </header>
+
+  <script>
+    document.getElementById("usernameDisplay").textContent = localStorage.getItem("username");
+  </script>
+
 
   <main>
     <section class="post-creator">
@@ -31,6 +38,10 @@
   <footer>
     <p>&copy; 2025 梦友 End of The Internet - 你已经刷到互联网的尽头了.</p>
   </footer>
+
+  <script>
+  checkLogin(); // This will redirect to login if user is not logged in
+  </script>
 
   <script src="Js/scripts.js"></script>
 </body>
