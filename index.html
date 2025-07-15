@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MengYou 梦友</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="login-page" class="page fade-in">
+    <div class="login-box slide-in">
+      <img src="assets/logo.png" class="logo" alt="MengYou Logo">
+      <h2>Login to MengYou 梦友</h2>
+      <input type="text" id="username" placeholder="Username"/>
+      <input type="password" id="password" placeholder="Password"/>
+      <button onclick="login()">Login</button>
+      <p id="error-msg"></p>
+    </div>
+  </div>
+
+  <div id="main-page" class="page hidden fade-in">
+    <div class="navbar">
+      <h1>MengYou 梦友</h1>
+      <div class="nav-buttons">
+        <button onclick="showPage('feed')">Feed</button>
+        <button onclick="showPage('profile')">Profile</button>
+        <button onclick="showPage('community')">Communities</button>
+        <button onclick="showPage('market')">Marketplace</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="feed" class="section">
+        <h2>Top Posts</h2>
+        <div class="carousel">
+          <img class="carousel-img fade-in" src="/Users/cheizhao/Documents/GitHub/MengYou-SNS-Web/Unknown-2 copy.jpg">
+          <img class="carousel-img hidden fade-in" src="/Users/cheizhao/Documents/GitHub/MengYou-SNS-Web/Unknown-4.jpg">
+          <img class="carousel-img hidden fade-in" src="assets/post3.jpg">
+        </div>
+
+        <h3>Recent Posts</h3>
+        <div class="post">
+          <img src="assets/post1.jpg" class="post-img">
+          <p><strong>@jane:</strong> Loving the vibe here! ✨</p>
+          <button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+        </div>
+        <div class="post">
+          <img src="assets/post2.jpg" class="post-img">
+          <p><strong>@ming:</strong> Weekend trip photos 🌄</p>
+          <button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+        </div>
+      </div>
+
+      <div id="profile" class="section hidden fade-in">
+        <h2>My Profile</h2>
+        <img src="assets/avatar.jpg" class="avatar"/>
+        <p><strong>Name:</strong> Meng You</p>
+        <p><strong>Followers:</strong> 120</p>
+        <p><strong>Posts:</strong> 45</p>
+      </div>
+
+      <div id="community" class="section hidden fade-in">
+        <h2>My Communities</h2>
+        <ul>
+          <li>🌸 Anime Lovers Club</li>
+          <li>🎨 Art & Sketch</li>
+          <li>🌍 Language Exchange</li>
+        </ul>
+      </div>
+
+      <div id="market" class="section hidden fade-in">
+        <h2>Marketplace</h2>
+        <p>🎁 Handmade accessories for sale!</p>
+        <p>🎨 Art commissions open!</p>
+        <p>🧥 Vintage clothing exchange!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
