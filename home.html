@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>梦友 Social Media</title>
+  <link rel="stylesheet" href="homecss.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">梦友⚛︎</div>
+    <nav class="nav-tags">
+      <span>Home</span>
+      <span>Marketplace</span>
+      <span>COMMUNITY</span>
+      <span>LOGOUT</span>
+    </nav>
+    <div class="profile-pic">
+      <img src="/Users/cheizhao/Documents/GitHub/MengYou-SNS-Web/ -7.jpg" alt="Profile Picture"/>
+    </div>
+  </header>
+
+  <!-- Main Banner -->
+<section class="banner-slider">
+  <div class="slides">
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="EFCB92D3-9AF0-483B-8F62-B50E8E5DED63_1_105_c.jpeg" alt="Honor of Kings" class="banner-img" />
+      <div class="banner-text">
+        <div class="banner-overlay-box">
+          <div class="top-tag"># TOP NEWS</div>
+          <h1>HONOR OF KINGS</h1>
+          <p>Seasonal New Skin Drops</p>
+          <p class="hashtags">#HOK #HOKglobal #王者荣耀国际游戏 #新来的英雄 #英雄 #newSkinDrop #2025</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="/Users/cheizhao/Documents/GitHub/MengYou-SNS-Web/D9499799-56D8-4944-B164-00E6A8EB68C7_1_105_c.jpeg" alt="Frieren" class="banner-img" />
+      <div class="banner-text">
+        <div class="banner-overlay-box">
+          <div class="top-tag"># TOP NEWS</div>
+          <h1>FRIEREN EVENT</h1>
+          <p>Limited Crossover Skins</p>
+          <p class="hashtags">#Anime #Crossover #HOKxFrieren #LimitedDrop #2025</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation -->
+  <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+  <button class="nav-btn next" onclick="nextSlide()">❯</button>
+</section>
+
+
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <div class="category"># ANIME</div>
+    <div class="category"># MOVIES</div>
+    <div class="category"># MUSIC</div>
+    <div class="category"># ARTS</div>
+    <div class="category"># GAMING</div>
+  </section>
+
+    <section class="post-card">
+    <div class="card">
+        <img src="/Users/cheizhao/Documents/GitHub/MengYou-SNS-Web/ -5.jpg" alt="Game Image">
+        
+        <div class="card-content">
+        <div class="content-overlay-box">
+            <div class="top-bar">
+            <div class="username">
+                VanYA99-Apex <i class="fas fa-chess-king"></i><i class="fas fa-star"></i>
+            </div>
+            <button class="follow-btn" onclick="followUser(this)">Follow</button>
+            </div>
+
+            <div>
+            <div class="title">My Experiences</div>
+            <div class="description">
+                In 2025 this is the best Game I recommend to you guys..<br>
+                <span class="hashtags">#gaming #2025 #recomendations #MNK #杀山的</span>
+            </div>
+            </div>
+
+            <div class="actions">
+            <i class="fas fa-heart" onclick="toggleHeart(this)"></i>
+            <i class="fas fa-comment" onclick="toggleComment(this)"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    ©ALL-RIGHT RESERVED MENGYOU梦友 SNS
+  </footer>
+
+  <script src="homescript.js"></script>
+</body>
+</html>
