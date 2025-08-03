@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>home - 梦友录 - Dream Friends Social</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo"><img src="/Users/cheizhao/Documents/SNS/pictures/logo.png" alt="梦友录 - Dream Friends Social" /></div>
+      <nav class="nav">
+        <button class="nav-btn active" data-page="home">Home</button>
+        <button class="nav-btn" data-page="marketplace">Marketplace</button>
+        <button class="nav-btn" data-page="community">Community</button>
+        <button class="nav-btn logout-btn" onclick="logout()">Logout</button>
+      </nav>
+      <button class="create-post-btn">+ Create Post</button>
+    </header>
+
+    <main class="main">
+      <!-- Home Page -->
+      <div id="home" class="page active">
+        <div class="hero-banner">
+          <div class="hero-slider">
+            <div class="hero-slide" style="background-image: url('/Users/cheizhao/Documents/SNS/pictures/wallhaven-q28v3q.png');">
+              <div class="hero-content">
+                <div class="hero-badge"># HOK GLOBAL</div>
+                <h1 class="hero-title">HONOR OF KINGS 王者荣耀</h1>
+                <p class="hero-subtitle">Seasonal New Skin Drops</p>
+                <div class="hero-tags">#HOK #HOKglobal #王者荣耀国际游戏 #新赛季的英雄 #英雄 #newSkinDrop #2025</div>
+              </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://cdn.abcotvs.com/dip/images/17369979_073025-kgo-tsunami-hazard-zone-img.jpg');">
+              <div class="hero-content">
+                <div class="hero-badge"># TOP NEWS</div>
+                <h1 class="hero-title">TSUNAMI WARNING - RUSSIA & JAPAN</h1>
+                <p class="hero-subtitle">Stay Safe and be Prepared</p>
+                <div class="hero-tags">#TsunamiWarning #NaturalDisaster #StaySafe</div>
+              </div>
+            </div>
+
+            <div class="hero-slide" style="background-image: url('https://w.wallhaven.cc/full/zx/wallhaven-zxlrqg.jpg');">
+              <div class="hero-content">
+                <div class="hero-badge"># HIANIME NEWS</div>
+                <h1 class="hero-title">ZOOTOPIA 2</h1>
+                <p class="hero-subtitle">Official Trailer DROPS !</p>
+                <div class="hero-tags">#HOK #HOKglobal #王者荣耀国际游戏 #新赛季的英雄 #英雄 #newSkinDrop #2025</div>
+              </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('/Users/cheizhao/Documents/SNS/pictures/0.jpeg');">
+              <div class="hero-content">
+                <div class="hero-badge"># ESPORTS</div>
+                <h1 class="hero-title">王者荣耀冠军赛 KWC Championship</h1>
+                <p class="hero-subtitle">Don’t miss the biggest stage!</p>
+                <div class="hero-tags">#KWC2025 #Esports #王者荣耀冠军赛</div>
+              </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('/Users/cheizhao/Documents/SNS/pictures/wallhaven-v97del.jpg');">
+              <div class="hero-content">
+                <div class="hero-badge"># UPDATES</div>
+                <h1 class="hero-title">New Hero Release!</h1>
+                <p class="hero-subtitle">The battlefield awaits a legend.</p>
+                <div class="hero-tags">#NewHero #MOBA #王者荣耀新英雄 #2025Season</div>
+              </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2023-10/untitled_design_0.png');">
+              <div class="hero-content">
+                <div class="hero-badge"># BBC NEWS</div>
+                <h1 class="hero-title">UNDERAGE SOCIAL MEDIA USE NOW A CRIME!</h1>
+                <p class="hero-subtitle">Effective immediately, any user under the age of 16 found using social media platforms will be considered in violation of the law.
+                                          🚫 This action is now classified as a criminal offense.</p>
+                <div class="hero-tags">#NoMinorsOnline #SocialMediaSafety #CyberLaw #DigitalResponsibility</div>
+              </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.bauerhosting.com/legacy/media/62ba/d72c/c8dd/246f/571e/e3b7/st-header-2.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80');">
+              <div class="hero-content">
+                <div class="hero-badge"># TODAY HOLLYWOOD</div>
+                <h1 class="hero-title">STRANGER THINGS 5</h1>
+                <p class="hero-subtitle">Stranger Things has come to its FINAL SHOW in NOVEMBER 2025.</p>
+                <div class="hero-tags">#StrangerThings #Netflix #Season5 #Milly #2025Season</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-nav">
+            <button class="hero-nav-btn prev">‹</button>
+            <button class="hero-nav-btn next">›</button>
+          </div>
+        </div>
+
+        <div class="category-tags">
+          <button class="category-tag"># ALL</button>
+          <button class="category-tag"># ANIME</button>
+          <button class="category-tag"># MOVIES</button>
+          <button class="category-tag"># MUSIC</button>
+          <button class="category-tag"># ARTS</button>
+          <button class="category-tag"># GAMING</button>
+          <button class="category-tag"># TECH</button>
+          <button class="category-tag"># MEME</button>
+          <button class="category-tag"># NEWS</button>
+        </div>
+
+          <!-- Posts will be rendered here -->
+            <!-- Create Post Modal -->
+            <div class="posts-grid">
+                <div class="post-card">
+              <div class="post-image" style="background-image: url('/Users/cheizhao/Documents/SNS/pictures/1207557.jpg');"></div>
+              <div class="post-details">
+                <h3>NCT Comeback</h3>
+                <p>Former Band AGAIN ON STAGE</p>
+                <div class="post-meta">
+                  <span>🕒 8/01/2025, 6:00 PM</span>
+                  <span>✍️ chei@email.com</span>
+                </div>
+                <div class="post-tag">#music #K-POP #NCT #NCT127</div>
+              </div>
+            </div>
+            <div class="post-card">
+              <div class="post-image" style="background-image: url('/Users/cheizhao/Documents/SNS/pictures/hq720.jpg');"></div>
+              <div class="post-details">
+                <h3>WAITING IS OVER</h3>
+                <p>LORD OF THE MYSTERIES Season 2 in this August!</p>
+                <div class="post-meta">
+                  <span>🕒 7/30/2025, 4:00 AM</span>
+                  <span>✍️ lam@email.com</span>
+                </div>
+                <div class="post-tag">#LOTM #donghua #manhua #anime</div>
+              </div>
+            </div>
+            <div class="post-card">
+              <div class="post-image" style="background-image: url('https://i.ytimg.com/vi/5HhZsW7ZJu4/sddefault.jpg?v=6870d770');"></div>
+                <div class="post-details">
+                <h3>Will World War 3 Happen?</h3>
+                <p>With rising global tensions and ongoing conflicts, many are concerned about the possibility of a third world war. Experts urge for diplomacy and peaceful resolutions to prevent escalation.</p>
+                <p><strong>Latest Incident:</strong> Recent escalations between Iran and Israel have further heightened fears, as both nations exchanged missile strikes, drawing international attention and calls for restraint.</p>
+                <div class="post-meta">
+                  <span>🕒 7/29/2025, 6:00 PM</span>
+                  <span>✍️ Ivan@email.com</span>
+                </div>
+                <div class="post-tag">#news #world #geopolitics #WW3</div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+      </div> <!-- Close #home -->
+
+      <!-- Marketplace Page -->
+      <div id="marketplace" class="page">
+        <div class="page-header">
+          <h1>🛒 Marketplace</h1>
+          <button class="create-listing-btn">+ Create Listing</button>
+        </div>
+
+        <div class="marketplace-filters">
+          <button class="filter-btn active">All Items</button>
+          <button class="filter-btn">Gaming</button>
+          <button class="filter-btn">Anime</button>
+          <button class="filter-btn">Collectibles</button>
+          <button class="filter-btn">Electronics</button>
+        </div>
+
+        <div class="marketplace-grid">
+          <!-- Marketplace Items -->
+          <div class="marketplace-item">
+            <div class="item-image"> <img src="https://cdn.shopify.com/s/files/1/0012/4957/4961/files/Redragon_K707_PRO_SE_80_Wireless_Gasket_RGB_Gaming_Keyboard_9.jpg?v=1733147309" alt="Gaming Mechanical Keyboard"></div>
+            <div class="item-content">
+              <h3>Gaming Mechanical Keyboard</h3>
+              <p class="item-price">$89.99</p>
+              <p class="item-description">STAR BLADE K707 PRO Anime Keyboard!</p>
+              <p class="item-description">✻ 80% 87 Keys TKL Mechanical Gaming Keyboard</p>
+              <p class="item-description">✻ Gasket Structure & Hot-Swap Functionality</p>
+              <p class="item-description">✻ 3-Mode Connectivity</p>
+              <p class="item-condition">Condition: Brand New</p>
+              <div class="item-tag">#gaming</div>
+              <p class="item-seller">By VanYA99-Apex 23h ago</p>
+              <div class="item-actions">
+                <button class="edit-btn">✏️ Edit</button>
+                <button class="delete-btn">🗑️ Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="marketplace-item">
+            <div class="item-image"> <img src="https://i.redd.it/trl7gnvi5csc1.jpeg" alt="Plushies Collection"></div>
+            <div class="item-content">
+              <h3>Plushies Collection</h3>
+              <p class="item-price">$156.5</p>
+              <p class="item-description">Rare anime plushies collection from popular game Love & Deepspace. Collector's items!</p>
+              <p class="item-condition">Condition: Excellent</p>
+              <div class="item-tag">#anime</div>
+              <p class="item-seller">By AnimeOtaku2025 1d ago</p>
+              <div class="item-actions">
+                <button class="contact-btn">📧 Contact Seller</button>
+                <button class="wishlist-btn">❤️ Add to Wishlist</button>
+                <button class="buy-btn" onclick="buyNow(
+                    'Plushies Collection',
+                    'Rare anime plushies collection from popular game Love & Deepspace. Collector\'s items!',
+                    'https://i.redd.it/trl7gnvi5csc1.jpeg',
+                    156.5
+                  )">💰 Buy Now
+                </button>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="marketplace-item">
+            <div class="item-image">
+              <img src="https://www.theaudiostore.in/cdn/shop/articles/Moondrop_Blessing_3_In-Ear_Monitors_Review.png?v=1688724684" alt="Wired Headset">
+            </div>
+              <div class="item-content">
+                <h3>Wired Headset</h3>
+                <p class="item-price">$129.99</p>
+                <p class="item-description">High-quality wired headset with noise cancellation.</p>
+                <p class="item-condition">Condition: Good</p>
+              <div class="item-tag">#electronics</div>
+                <p class="item-seller">By TechGuru_CN 1d ago</p>
+              <div class="item-actions">
+                <button class="contact-btn">📧 Contact Seller</button>
+                <button class="wishlist-btn">❤️ Add to Wishlist</button>
+                <button 
+                  class="buy-btn"
+                  onclick="buyNow(
+                    'Wired Headset',
+                    'High-quality wired headset with noise cancellation.',
+                    'https://www.theaudiostore.in/cdn/shop/articles/Moondrop_Blessing_3_In-Ear_Monitors_Review.png?v=1688724684',
+                    129.99
+                  )">
+                  💰 Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Marketplace Item Card with Buy Now Button -->
+
+      <!-- Community Page -->
+      <div id="community" class="page">
+        <div class="category-tags">
+          <button class="category-tag active"># ALL</button>
+          <button class="category-tag"># ANIME</button>
+          <button class="category-tag"># MOVIES</button>
+          <button class="category-tag"># MUSIC</button>
+          <button class="category-tag"># ARTS</button>
+          <button class="category-tag"># GAMING</button>
+        </div>
+
+        <div class="communities-section">
+          <div class="section-header">
+            <h2>👥 Communities</h2>
+            <button class="create-community-btn">+ Create Community</button>
+          </div>
+
+          <div class="communities-grid">
+            <!-- Community Cards -->
+            <div class="community-card">
+              <div class="community-image"><img src="https://cdn.solo.to/og/agbeting.jpg" alt="AG"></div>
+              <div class="community-content">
+                <h3>AG Gaming Masters AG游戏大师</h3>
+                <p>Community for serious gamers to share strategies, reviews, and connect with fellow players.</p>
+                <div class="community-stats"><span>👥 124k members</span><span>💬 89 posts</span></div>
+                <div class="community-tag">#gaming</div>
+                <p class="community-creator">Created by GameMaster2025</p>
+                <div class="community-actions">
+                  <button class="leave-btn">Leave</button>
+                  <button class="view-posts-btn">View Posts</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="community-card">
+              <div class="community-image"><img src="https://cdn.solo.to/og/animehub.jpg" alt="Anime Discussion Hub"></div>
+              <div class="community-content">
+                <h3>Anime Discussion Hub</h3>
+                <p>Discuss the latest anime, manga, and Japanese culture with fellow otakus.</p>
+                <div class="community-stats"><span>👥 892 members</span><span>💬 156 posts</span></div>
+                <div class="community-tag">#anime</div>
+                <p class="community-creator">Created by AnimeOtaku2025</p>
+                <div class="community-actions">
+                  <button class="join-btn">Join</button>
+                  <button class="view-posts-btn">View Posts</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="community-card">
+              <div class="community-image"><img src="https://media.licdn.com/dms/image/v2/D4E22AQEBRNkY8MgEbQ/feedshare-shrink_800/feedshare-shrink_800/0/1725314197250?e=2147483647&v=beta&t=LOLJOrTbuEAxxrkJkPF4FPr2vpHz7usOplHFfchDsTI" alt="Digital Art Creators"></div>
+              <div class="community-content">
+                <h3>Digital Art Creators</h3>
+                <p>Share your digital artwork, get feedback, and learn new techniques.</p>
+                <div class="community-stats"><span>👥 634 members</span><span>💬 234 posts</span></div>
+                <div class="community-tag">#arts</div>
+                <p class="community-creator">Created by ArtistPro</p>
+                <div class="community-actions">
+                  <button class="leave-btn">Leave</button>
+                  <button class="view-posts-btn">View Posts</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="community-card">
+              <div class="community-image"><img src="https://thumbs.dreamstime.com/b/pixel-glasses-meme-like-boss-pixelation-accessory-optical-fashion-bit-funky-logo-icon-vector-cartoon-eyeglass-frame-287933457.jpg" alt="International Meme"></div>
+              <div class="community-content">
+                <h3>International Meme</h3>
+                <p>For meme enthusiasts to share and create the funniest memes.</p>
+                <div class="community-stats"><span>👥 445k members</span><span>💬 679k posts</span></div>
+                <div class="community-tag">#meme</div>
+                <p class="community-creator">Created by MemeMaster2025</p>
+                <div class="community-actions">
+                  <button class="join-btn">Join</button>
+                  <button class="view-posts-btn">View Posts</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">©ALL-RIGHT RESERVED MENGYOU梦友 SNS</footer>
+  </div>
+
+  
+
+  <!-- Messages Panel -->
+  <div id="messagesPanel" class="messages-panel">
+    <div class="messages-header">
+      <h3>Messages</h3>
+      <button class="close-messages" onclick="closeMessages()">&times;</button>
+    </div>
+    <div class="messages-list">
+      <div class="message-item">
+        <div class="message-avatar"></div>
+        <div class="message-content">
+          <div class="message-sender">AnimeOtaku2025</div>
+          <div class="message-text">Hey! Interested in your anime figure collection!</div>
+          <div class="message-time">2h ago</div>
+        </div>
+      </div>
+      <div class="message-item">
+        <div class="message-avatar"></div>
+        <div class="message-content">
+          <div class="message-sender">GameMaster2025</div>
+          <div class="message-text">Great post about the new gaming setup!</div>
+          <div class="message-time">5h ago</div>
+        </div>
+      </div>
+    </div>
+    <div class="message-input">
+      <input type="text" placeholder="Type a message..." id="messageInput" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

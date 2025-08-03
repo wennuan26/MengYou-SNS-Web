@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - 梦友录</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1 class="logo"><img src="/Users/cheizhao/Documents/SNS/pictures/logo.png" alt="梦友录 - Dream Friends Social" /></h1>
+                <p>Welcome back to Dream Friends Social</p>
+            </div>
+            
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="auth-btn">Login</button>
+                
+                <div class="auth-links">
+                    <p>Don't have an account? <a href="register.html">Register here</a></p>
+                </div>
+            </form>
+            
+            <div class="demo-accounts">
+                <h3>Demo Accounts:</h3>
+                <div class="demo-account">
+                    <strong>User 1:</strong> chei@email.com / chei123
+                </div>
+                <div class="demo-account">
+                    <strong>User 2:</strong> lam@email.com / lam123
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

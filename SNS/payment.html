@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - 梦友录 Dream Friends Social</title>
+  <link rel="stylesheet" href="payment.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="/Users/cheizhao/Documents/SNS/pictures/logo.png" alt="梦友录 - Dream Friends Social" />
+      </div>
+      <nav class="nav">
+        <button class="nav-btn" onclick="goBack()">← Back to Marketplace</button>
+      </nav>
+    </header>
+
+    <main class="checkout-main">
+      <div class="checkout-container">
+        <!-- Order Summary -->
+        <div class="order-summary">
+          <h2>📦 Order Summary</h2>
+          <div class="order-item" id="orderItem">
+            <div class="item-image">
+              <img src="" alt="Product Image" />
+            </div>
+            <div class="item-details">
+              <h3 id="itemName">...</h3>
+              <p id="itemDesc">...</p>
+              <div class="item-price" id="itemPrice">$0.00</div>
+            </div>
+          </div>
+          <div class="order-total">
+            <div class="total-row">
+              <span>Subtotal:</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="total-row">
+              <span>Shipping:</span>
+              <span id="shippingCost">$5.99</span>
+            </div>
+            <div class="total-row">
+              <span>Tax:</span>
+              <span id="taxAmount">$7.20</span>
+            </div>
+            <div class="total-row final-total">
+              <span>Total:</span>
+              <span id="finalTotal">$0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkout Form -->
+        <div class="checkout-form">
+          <form id="checkoutForm">
+            <!-- Personal Info -->
+            <div class="form-section">
+              <h3>👤 Personal Information</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactNumber">Contact Number *</label>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="+1 (555) 123-4567" required />
+              </div>
+              <div class="form-group">
+                <label>Date of Birth *</label>
+                <div class="date-selector">
+                  <select id="birthMonth" name="birthMonth" required>
+                    <option value="">Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                  <select id="birthDay" name="birthDay" required><option value="">Day</option></select>
+                  <select id="birthYear" name="birthYear" required><option value="">Year</option></select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="idNumber">NIC/Passport Number *</label>
+                <input type="text" id="idNumber" name="idNumber" maxlength="10" placeholder="Enter 10-digit ID" required />
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-section">
+              <h3>🏠 Shipping Address</h3>
+              <div class="form-group">
+                <label for="address">Street Address *</label>
+                <input type="text" id="address" name="address" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" name="city" required />
+                </div>
+                <div class="form-group">
+                  <label for="state">State/Province *</label>
+                  <input type="text" id="state" name="state" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="zipCode">ZIP/Postal Code *</label>
+                  <input type="text" id="zipCode" name="zipCode" required />
+                </div>
+                <div class="form-group">
+                  <label for="country">Country *</label>
+                  <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="JP">Japan</option>
+                    <option value="CN">China</option>
+                    <option value="KR">South Korea</option>
+                    <option value="SG">Singapore</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="TH">Thailand</option>
+                    <option value="PH">Philippines</option>
+                    <option value="IN">India</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment -->
+            <div class="form-section">
+              <h3>💳 Payment Method</h3>
+              <div class="payment-methods">
+                <div class="payment-option">
+                  <input type="radio" id="cod" name="paymentMethod" value="cod" checked />
+                  <label for="cod">Cash on Delivery</label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" id="visa" name="paymentMethod" value="visa" />
+                  <label for="visa">Visa</label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" id="mastercard" name="paymentMethod" value="mastercard" />
+                  <label for="mastercard">Mastercard</label>
+                </div>
+              </div>
+              <div id="cardDetails" class="card-details" style="display: none;">
+                <div class="form-group"><label for="cardNumber">Card Number *</label><input type="text" id="cardNumber" name="cardNumber" /></div>
+                <div class="form-row">
+                  <div class="form-group"><label for="expiryDate">Expiry *</label><input type="text" id="expiryDate" name="expiryDate" /></div>
+                  <div class="form-group"><label for="cvv">CVV *</label><input type="text" id="cvv" name="cvv" /></div>
+                </div>
+                <div class="form-group"><label for="cardName">Name on Card *</label><input type="text" id="cardName" name="cardName" /></div>
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div class="form-section">
+              <label for="orderNotes">📝 Order Notes</label>
+              <textarea id="orderNotes" name="orderNotes" placeholder="Any special instructions..."></textarea>
+            </div>
+
+            <!-- Terms -->
+            <div class="form-section">
+              <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms">I agree to the Terms and Privacy</label>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-actions">
+              <button type="submit" class="btn-primary" id="placeOrderBtn">
+                <span class="btn-text">Place Order</span>
+                <span class="btn-loading" style="display: none;">Processing...</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content success-modal">
+        <div class="success-icon">✅</div>
+        <h2>Order Placed Successfully!</h2>
+        <p>Thank you for your purchase.</p>
+        <div class="order-details">
+          <p><strong>Order ID:</strong> <span id="orderIdDisplay">#DF2025001</span></p>
+          <p><strong>Estimated Delivery:</strong> <span id="deliveryDate">3-5 business days</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Link external logic -->
+  <script src="payment.js"></script>
+</body>
+</html>
